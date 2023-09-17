@@ -4,15 +4,17 @@ import requests
 from models import professor_information
 from utils import get_professor_information
 app = Flask(__name__)
-CORS(app=app)
+CORS(app=app, threaded=True, use_reloader=True)
 
 @app.route('/queryProfessorResults', methods=['POST'])
 def query_professor_results():
     # Get the request body data
-    professor_names = ["richard whittaker", "robert hacker", "Antonio Hernandez"]
-
+    professor_names: list = ["richard whittaker", "robert hacker", "kianoosh boroojeni"]
     response = get_professor_information.query_graphQL(professor_names)
-    
+    # comments = get_reviews.get_professor_reviews(response)
+    # summary, sentiment = openai_client.get_summary_and_sentiment(comments)
+    # response['summary'] = summary
+    # response['sentiment'] = sentiment
 
     return jsonify({"professorInformationList": response})
 

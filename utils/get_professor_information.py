@@ -22,19 +22,25 @@ def get_cookies():
     return response.cookies.get_dict()
 
 def query_graphQL(professor_names:list):
+    professor_information = dict()
     # Load cache
     cache = load_cache()
     
     # Check if the result is already in cache
-    for name in professor_names:
-        if name in cache:
-            professor_information[name] = cache[name]
-            professor_names.remove(name)
-
+    #use a lambda to convert professor names to lowercase
+    
+    length = len(professor_names)
+    i = 0
+    while i < length:
+        if professor_names[i].lower() in cache:
+            professor_information[professor_names[i].lower()] = cache[professor_names[i].lower()]
+        i += 1
+            
     # If all names were found in cache, return
-    if not professor_names:
+    if len(professor_information.keys()) == len(professor_names):
         return professor_information
-    cookies = get_cookies();
+    
+    cookies = get_cookies()
 
     headers = {
         'Accept': '*/*',
@@ -55,7 +61,6 @@ def query_graphQL(professor_names:list):
         'sec-ch-ua-platform': '"macOS"',
     }
 
-    professor_information = dict()
     cache = dict()
     after_cursor = ""
     while True:
