@@ -1,18 +1,1 @@
-{
-    "john zweibel": {
-        "legacyId": 268015,
-        "avgDifficulty": 3.8,
-        "avgRating": 3.3,
-        "wouldTakeAgainPercent": 46.4286,
-        "summary": "Overall, opinions about Professor Zweibel are mixed. Some students praise his passion and expertise in the subject, stating that doing the assigned homework will prepare you well for exams. Others criticize his lack of clear explanations and teaching of proofs. Some students find his exams extremely difficult, while others appreciate his clear lectures and availability during office hours. It is advised to attend every class and seek additional help if needed.",
-        "sentiment": "0.9"
-    },
-    "gueo grantcharov": {
-        "legacyId": 653617,
-        "avgDifficulty": 4.5,
-        "avgRating": 2.6,
-        "wouldTakeAgainPercent": 43.75,
-        "summary": "Professor Grantcharov is a very intelligent and knowledgeable professor, but his teaching style and grading can be challenging. He expects students to have a strong understanding of the material and does not always thoroughly explain concepts. His handwriting is difficult to read, and he can be unorganized. However, he offers extra credit and is willing to help students outside of class. Overall, taking his class requires effort and self-study, but it is possible to succeed with his guidance.",
-        "sentiment": "0.8"
-    }
-}
+{"john zweibel": {"legacyId": 268015, "avgDifficulty": 3.8, "avgRating": 3.3, "wouldTakeAgainPercent": 46.4286, "summary": "Overall, opinions about Professor Zweibel are mixed. Some students praise his passion and expertise in the subject, stating that doing the assigned homework will prepare you well for exams. Others criticize his explanation skills and the difficulty of his exams, with some feeling that he does not adequately teach proofs. Some students also mention that he is helpful during office hours and that studying definitions and doing homework is key to success. However, there are also negative comments about the difficulty of exams, the lack of preparation for them, and the heavy workload.", "sentiment": "0.9"}, "gueo grantcharov": {"legacyId": 653617, "avgDifficulty": 4.5, "avgRating": 2.6, "wouldTakeAgainPercent": 43.75, "summary": "Professor Grantcharov is a very intelligent and knowledgeable professor, but his teaching style and grading can be challenging. He expects students to have a strong understanding of the material and does not always thoroughly explain concepts. His handwriting is difficult to read, and he tends to solve problems on the board without giving students a chance to think through them first. However, he offers extra credit and reviews before exams, and if you put in the effort, it is possible to pass the class. Some students find his lectures helpful and appreciate his unconventional teaching methods, while others struggle to understand him and feel that he is not a fair grader. Overall, it seems that taking his class requires dedication and self-study.", "sentiment": "0.8"}}

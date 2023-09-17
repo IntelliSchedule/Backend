@@ -31,15 +31,20 @@ def compare_payload_and_cache(payload):
     # Get the list of professor names from the payload
     professor_names = payload.get('professorNames', [])
     
-    length = len(professor_names)
-    i = 0
-    while i < length:
-        if professor_names[i].lower() in cache:
-            response[professor_names[i].lower()] = cache[professor_names[i].lower()]
-            professor_names.remove[professor_names[i].lower()]
-        i += 1
+    remaining_professor_names = []
     
-    return response, professor_names
+    for name in professor_names:
+        lowered_name = name.lower()
+        if '\n' in lowered_name:
+            continue
+
+        if lowered_name in cache:
+            response[lowered_name] = cache[lowered_name]
+        else:
+            remaining_professor_names.append(name)
+    
+    return response, remaining_professor_names
+
 
 @app.route('/queryProfessorResults', methods=['POST'])
 def query_professor_results():
@@ -51,7 +56,7 @@ def query_professor_results():
         return jsonify({"error": "Invalid payload structure, expecting a dictionary"}), 400
 
     response, professor_names = compare_payload_and_cache(payload=payload)
-    
+
     if not professor_names:
          return jsonify({"professorInformationList": response})
 
