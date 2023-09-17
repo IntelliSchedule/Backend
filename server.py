@@ -10,11 +10,20 @@ CORS(app=app, threaded=True, use_reloader=True)
 @app.route('/queryProfessorResults', methods=['POST'])
 def query_professor_results():
     # Get the request body data
-    professor_names: list = ["richard whittaker", "robert hacker", "antonio hernandez"]
+    payload = request.json
+    print(f"Received payload: {payload}")
+
+    if not isinstance(payload, dict):
+        return jsonify({"error": "Invalid payload structure, expecting a dictionary"}), 400
+
+    professor_names = payload.get('professorNames', [])
+
+    print(professor_names)
     response = query_graphQL(professor_names)
     comments = get_professor_reviews(response)
-    response= get_summary_and_sentiment(comments)
+    response = get_summary_and_sentiment(comments)
 
+    print(response)
     return jsonify({"professorInformationList": response})
 
 if __name__ == '__main__':
