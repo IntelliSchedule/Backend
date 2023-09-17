@@ -1,0 +1,18 @@
+{
+    "john zweibel": {
+        "legacyId": 268015,
+        "avgDifficulty": 3.8,
+        "avgRating": 3.3,
+        "wouldTakeAgainPercent": 46.4286,
+        "summary": "Overall, opinions about Professor Zweibel are mixed. Some students praise his passion and expertise in the subject, stating that doing the assigned homework will prepare you well for exams. Others criticize his lack of clear explanations and teaching of proofs. Some students find his exams extremely difficult, while others appreciate his clear lectures and availability during office hours. It is advised to attend every class and seek additional help if needed.",
+        "sentiment": "0.9"
+    },
+    "gueo grantcharov": {
+        "legacyId": 653617,
+        "avgDifficulty": 4.5,
+        "avgRating": 2.6,
+        "wouldTakeAgainPercent": 43.75,
+        "summary": "Professor Grantcharov is a very intelligent and knowledgeable professor, but his teaching style and grading can be challenging. He expects students to have a strong understanding of the material and does not always thoroughly explain concepts. His handwriting is difficult to read, and he can be unorganized. However, he offers extra credit and is willing to help students outside of class. Overall, taking his class requires effort and self-study, but it is possible to succeed with his guidance.",
+        "sentiment": "0.8"
+    }
+}
